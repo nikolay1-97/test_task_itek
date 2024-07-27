@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "test-itek"
+version = "0.1.0"
+description = ""
+authors = ["nikolay1-97 <nikolay111_connect@mail.ru>"]
+readme = "README.md"
+packages = [{include = "test_itek"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.111.1"
+alembic = "^1.13.2"
+redis = "^5.0.7"
+pydantic-settings = "2.3.4"
+asyncpg = "^0.29.0"
+psycopg2-binary = "^2.9.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
