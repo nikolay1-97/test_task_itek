@@ -1,39 +1,24 @@
-"""Модуль со схемами данных запрсов и ответов."""
+"""Модуль со схемами данных."""
 from pydantic import BaseModel
 
 class UserModel(BaseModel):
-    """Модель данных создания пользователя."""
+    """Модель данных для создания пользователя."""
     surname: str
     name: str
     patronymic: str
 
 
 class UserUpdateResp(BaseModel):
-    """Модель ответа обновления пользователя."""
+    """Модель данных ответа для обновления пользователя."""
     id: str
     new_surname: str
     new_name: str
     new_patronymic: str
+
 
 class UserResp(BaseModel):
-    """Модель ответа запроса пользователя."""
+    """Модель данных ответа для запроса пользователя."""
     id: str
     surname: str
     name: str
     patronymic: str
-
-
-class UserRespRedis(BaseModel):
-    """Модель ответа запроса пользователя."""
-    id: str
-    surname: str
-    name: str
-    patronymic: str
-
-
-class UserUpdateRespRedis(BaseModel):
-    """Модель ответа запроса пользователя."""
-    id: str
-    new_surname: str
-    new_name: str
-    new_patronymic: str

@@ -2,16 +2,14 @@
 from fastapi import FastAPI
 from redis import asyncio as aioredis
 import uvicorn
+
 from config import settings
+
 from views.crud_for_users import user_router
 
 
 def get_application() -> FastAPI:
-    """Возвращает экземпляр приложения.
-
-    Returns:
-        FastAPI: _description_
-    """
+    """Возвращает экземпляр приложения."""
     application = FastAPI()
     return application
 

@@ -1,13 +1,11 @@
-"""Модели таблиц базы данных."""
+"""Модуль с моделями данных базы данных."""
 import uuid
 
 from sqlalchemy import (
     MetaData,
     Table,
     Column,
-    Integer,
     String,
-    ForeignKey,
 )
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
@@ -15,8 +13,11 @@ from sqlalchemy.dialects.postgresql import UUID
 
 from config import DB_URL
 
+
 metadata = MetaData()
+
 engine = create_async_engine(DB_URL)
+
 async_session_maker = sessionmaker(
     engine,
     class_=AsyncSession,
